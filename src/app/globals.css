@@ -25,3 +25,24 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.shiny-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-effect::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    opacity: 0;
+    transition: opacity 0.2s;
+    background: radial-gradient(white, #3984ff00 80%);
+}
+
+.shiny-effect:hover::after {
+    opacity: 0.3;
+}
