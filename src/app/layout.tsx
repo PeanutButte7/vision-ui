@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'Vision UI',
-    description: 'The new UI kit inspired by Apple Vision Pro',
+    title: 'Vision UI - components inspired by Apple Vision Pro',
+    description: 'The new Tailwind UI kit inspired by Apple Vision Pro',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

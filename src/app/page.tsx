@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <QueryClientProvider client={queryClient}>
             <main className='flex min-h-screen h-screen flex-col items-center justify-center mx-auto'>
-                <div className='flex flex-col items-center justify-center w-full h-full md:w-[724px] md:h-auto lg:w-[864px] pt-32 pb-32 bg-glass-50 glass-blur rounded-none md:rounded-canvas border-2 border-glass-20'>
+                <div className='flex flex-col items-center justify-center w-full h-full md:w-[724px] md:h-auto lg:w-[864px] pt-32 pb-32 bg-glass-50 glass-blur rounded-none md:rounded-canvas md:border-2 border-glass-20'>
                     <NewsPill>
                         <IconBrandTwitter className='h-5' />
                         <p>Follow me for live updates!</p>
