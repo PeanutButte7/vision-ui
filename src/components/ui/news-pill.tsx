@@ -6,16 +6,16 @@ interface NewsPillProps {
 }
 
 export function NewsPill({ children }: NewsPillProps) {
-    const newsPillRef = useCallback(
-        (element: HTMLElement | null) => shineEffect(element),
-        []
-    );
+    // const newsPillRef = useCallback(
+    //     (element: HTMLElement | null) => shineEffect(element),
+    //     []
+    // );
 
     return (
         <a
             href='https://twitter.com/AdamBartas'
             target='_blank'
-            ref={newsPillRef}
+            // ref={newsPillRef}
             className='shiny-effect flex flex-row items-center gap-2 min-h-[1.75rem] px-4 py-1 rounded-full bg-glass-20 text-neutral-50 text-sm'
         >
             {children}

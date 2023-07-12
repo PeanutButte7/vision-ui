@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '@/styles/globals.css';
+import '@/styles/landing.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

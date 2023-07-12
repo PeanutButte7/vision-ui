@@ -1,7 +1,7 @@
 'use client';
 
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { EmailSubscription } from '@/components/email-subscription';
+import { EmailSubscription } from '@/components/internal/email-subscription';
 import { NewsPill } from '@/components/ui/news-pill';
 import { IconBrandTwitter } from '@tabler/icons-react';
 

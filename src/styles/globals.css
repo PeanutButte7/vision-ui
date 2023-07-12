@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --foreground: #171717FF;
+        --foreground-muted: #525252FF;
+        --background: #FAFAFAFF;
+        --background-glass: #FAFAFA80;
+        --background-glass-accent: #5656561A;
+        --border: #5252524D;
+        --background-gradient: linear-gradient(123.56deg, #F9F9F9 6.47%, #C4C4C4 94.19%);
+    }
+
+    .dark {
+        --foreground: #FAFAFAFF;
+        --foreground-muted: #E5E5E5FF;
+        --background: #171717FF;
+        --background-glass: #0A0A0A33;
+        --background-glass-accent: #DEDEDE1A;
+        --border: #B0B0B04D;
+        --background-gradient: linear-gradient(130deg, rgb(45, 45, 45), rgb(17, 17, 17));
+    }
+}
+
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        background-image: linear-gradient(var(--background-glass), var(--background-glass)), var(--background-gradient);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.shiny-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-effect::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    opacity: 0;
+    transition: opacity 0.2s;
+    background: radial-gradient(white, #3984ff00 80%);
+}
+
+.shiny-effect:hover::after {
+    opacity: 0.3;
+}

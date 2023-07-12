@@ -6,11 +6,12 @@ export const Doc = defineDocumentType(() => ({
     contentType: 'mdx',
     fields: {
         title: { type: 'string', required: true },
+        description: { type: 'string' },
     },
     computedFields: {
         url: {
             type: 'string',
-            resolve: (doc) => `./src/docs/${doc._raw.flattenedPath}`,
+            resolve: (doc) => `/docs/${doc._raw.flattenedPath}`,
         },
     },
 }));

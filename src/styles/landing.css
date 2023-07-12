@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
     --background-url: url('https://images.unsplash.com/photo-1653972233499-eaad56990299?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3132&q=80');
     --background-gradient: linear-gradient(250deg, rgb(212, 208, 205), rgb(128, 123, 120));
@@ -11,8 +7,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background-url: url("https://images.unsplash.com/photo-1541194577687-8c63bf9e7ee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80");
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
+        --background-gradient: linear-gradient(250deg, rgb(212, 208, 205), rgb(128, 123, 120));
     }
 }
 
@@ -21,25 +16,4 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.shiny-effect {
-    position: relative;
-    overflow: hidden;
-}
-
-.shiny-effect::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: calc(var(--y, 0) * 1px - 50px);
-    left: calc(var(--x, 0) * 1px - 50px);
-    opacity: 0;
-    transition: opacity 0.2s;
-    background: radial-gradient(white, #3984ff00 80%);
-}
-
-.shiny-effect:hover::after {
-    opacity: 0.3;
 }

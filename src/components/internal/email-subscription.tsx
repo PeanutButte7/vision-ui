@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback } from 'react';
 import { z } from 'zod';
 import { useMutation } from 'react-query';
