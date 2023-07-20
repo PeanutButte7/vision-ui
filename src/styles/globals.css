@@ -27,7 +27,7 @@
 
 @layer base {
     * {
-        @apply border-border outline-border;
+        @apply border-border;
     }
 
     body {

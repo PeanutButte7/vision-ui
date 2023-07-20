@@ -19,7 +19,7 @@ export function LinkButtonExample() {
 
 export function IconButtonExample() {
     return (
-        <Button size='icon'>
+        <Button size='icon' variant='link'>
             <IconHeart size={18} />
         </Button>
     );
