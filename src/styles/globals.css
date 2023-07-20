@@ -4,35 +4,35 @@
 
 @layer base {
     :root {
-        --foreground: #171717FF;
-        --foreground-muted: #525252FF;
-        --background: #FAFAFAFF;
-        --background-glass: #FAFAFA80;
-        --background-glass-accent: #5656561A;
-        --border: #5252524D;
-        --background-gradient: linear-gradient(123.56deg, #F9F9F9 6.47%, #C4C4C4 94.19%);
+        --foreground: 23 23 23;
+        --foreground-muted: 82 82 82;
+        --background: 250 250 250;
+        --background-glass: 250 250 250;
+        --background-glass-accent: 86 86 86;
+        --border: 82 82 82;
+        --background-gradient: linear-gradient(123.56deg, rgb(249 249 249), rgb(196 196 196));
     }
 
     .dark {
-        --foreground: #FAFAFAFF;
-        --foreground-muted: #E5E5E5FF;
-        --background: #171717FF;
-        --background-glass: #0A0A0A33;
-        --background-glass-accent: #DEDEDE1A;
-        --border: #B0B0B04D;
-        --background-gradient: linear-gradient(130deg, rgb(45, 45, 45), rgb(17, 17, 17));
+        --foreground: 250 250 250;
+        --foreground-muted: 229 229 229;
+        --background: 23 23 23;
+        --background-glass: 10 10 10;
+        --background-glass-accent: 222 222 222;
+        --border: 176 176 176;
+        --background-gradient: linear-gradient(130deg, rgb(45 45 45), rgb(17 17 17));
     }
 }
 
 
 @layer base {
     * {
-        @apply border-border;
+        @apply border-border outline-border;
     }
 
     body {
         @apply bg-background text-foreground;
-        background-image: linear-gradient(var(--background-glass), var(--background-glass)), var(--background-gradient);
+        background-image: var(--background-gradient);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

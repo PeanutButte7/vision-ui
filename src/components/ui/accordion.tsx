@@ -28,7 +28,7 @@ const AccordionItem = forwardRef<
     <AccordionPrimitive.Item
         ref={ref}
         className={cn(
-            'flex flex-col gap-2 p-4 [&[data-state=open]]:bg-background-glass-accent',
+            '[&[data-state=open]]:bg-background-glass-accent',
             className
         )}
         {...props}
@@ -45,7 +45,7 @@ const AccordionTrigger = forwardRef<
         <AccordionPrimitive.Trigger
             ref={ref}
             className={cn(
-                'flex justify-between w-full [&[data-state=open]>svg]:rotate-180',
+                'flex justify-between w-full p-4 [&[data-state=open]>svg]:rotate-180',
                 className
             )}
             {...props}
@@ -65,7 +65,7 @@ const AccordionContent = forwardRef<
     <AccordionPrimitive.Content
         ref={ref}
         className={cn(
-            'overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down ',
+            'px-4 pb-4 overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down ',
             className
         )}
         {...props}

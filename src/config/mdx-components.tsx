@@ -1,8 +1,16 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, ReactElement } from 'react';
 import ComponentExample from '@/components/internal/component-example';
-import { AccordionExample } from '@/components/examples';
+import {
+    AccordionExample,
+    ButtonExample,
+    ImportantButtonExample,
+    OutlineButtonExample,
+    LinkButtonExample,
+    IconButtonExample,
+} from '@/components/examples';
 import { cn } from '@/utils/class-helper';
-import { IconCopy } from '@tabler/icons-react';
+import { CopyButton } from '@/components/internal';
+import { Separator } from '@/components/ui';
 
 export const mdxComponents = {
     // Internal
@@ -10,24 +18,40 @@ export const mdxComponents = {
 
     // UI
     AccordionExample,
+    ButtonExample,
+    ImportantButtonExample,
+    OutlineButtonExample,
+    LinkButtonExample,
+    IconButtonExample,
 
     // Base
     h2: ({ className, ...props }: HTMLAttributes<HTMLParagraphElement>) => (
-        <h2
-            className={cn('mt-4 mb-1 text-2xl font-semibold', className)}
+        <div className='mb-6'>
+            <h2
+                className={cn('mt-4 mb-2 text-2xl font-semibold', className)}
+                {...props}
+            />
+            <Separator />
+        </div>
+    ),
+    h3: ({ className, ...props }: HTMLAttributes<HTMLParagraphElement>) => (
+        <h3
+            className={cn('mt-4 mb-4 text-xl font-semibold', className)}
             {...props}
         />
     ),
-    pre: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    pre: ({ className, ...props }: HTMLAttributes<HTMLElement>) => (
         <pre
             className={cn(
-                'flex justify-between px-4 py-4 bg-background-glass border rounded-lg font-mono text-sm',
+                'flex justify-between items-center px-4 py-3 my-4 bg-background-glass border rounded-lg font-mono text-sm',
                 className
             )}
             {...props}
         >
             {props.children}
-            <IconCopy />
+            {props.children && (
+                <CopyButton code={props.children as ReactElement} />
+            )}
         </pre>
     ),
     ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (

@@ -1,6 +1,7 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { allDocs } from 'contentlayer/generated';
 import { mdxComponents } from '@/config';
+import { Separator } from '@/components/ui';
 
 export const generateStaticParams = async () => {
     return allDocs.map((doc) => ({ slug: doc._raw.flattenedPath }));
@@ -21,12 +22,13 @@ export default function DocumentPage({ params }: { params: { slug: string } }) {
     const MDXContent = useMDXComponent(doc.body.code);
 
     return (
-        <article className='ml-10 max-w-xl'>
+        <article className='ml-10 w-[40rem]'>
             <div className='mb-8'>
                 <h1 className='mb-2 text-3xl font-semibold'>{doc.title}</h1>
-                <h3 className='mb-8 text-lg text-foreground-muted'>
+                <h4 className='text-lg text-foreground-muted'>
                     {doc.description}
-                </h3>
+                </h4>
+                <Separator className='my-6' />
                 <MDXContent components={mdxComponents} />
             </div>
         </article>

@@ -18,17 +18,17 @@ module.exports = {
         extend: {
             colors: {
                 foreground: {
-                    DEFAULT: 'var(--foreground)',
-                    muted: 'var(--foreground-muted)',
+                    DEFAULT: 'rgb(var(--foreground) / 1)',
+                    muted: 'rgb(var(--foreground-muted) / 1)',
                 },
                 background: {
-                    DEFAULT: 'var(--background)',
+                    DEFAULT: 'rgb(var(--background) / 1)',
                     glass: {
-                        DEFAULT: 'var(--background-glass)',
-                        accent: 'var(--background-glass-accent)',
+                        DEFAULT: 'rgb(var(--background) / 0.5)', // Should be 0.2 for dark mode
+                        accent: 'rgb(var(--background-glass-accent) / 0.1)',
                     },
                 },
-                border: 'var(--border)',
+                border: 'rgb(var(--border) / 0.3)',
             },
             boxShadow: {
                 'inner-none': '0px 0px 0px 0px rgba(0, 0, 0, 0) inset',

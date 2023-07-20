@@ -17,7 +17,7 @@ function findDoc(name: string) {
 }
 
 const gettingStarted = ['introduction', 'guidelines'];
-const components = ['accordion'];
+const components = ['accordion', 'button', 'tabs'];
 
 export const DocsStructure = [
     {
